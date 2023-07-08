@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicking dots</title>
+    <style>
+        *{padding: 0px;margin:0px auto;background-color: #252525;}
+        #container{overflow:hidden;border: 3px solid #9c9990;border-radius: 25px;width: 70vw;height: 95vh;margin: 10px auto;}
+        #title{text-align: center;margin:0px auto;color: #CFD2B2;height: 10%;width: 80%;margin-top: 1%;padding-bottom: 8px;border-bottom: 3px solid #9c9990;background-color: transparent;}
+        #title a{text-decoration: none;color: #CFD2B2;}
+        #game{height: 68%;width:80%;border-bottom: 3px solid #9c9990;background-color: transparent;}
+        #gamezone{background-color: transparent !important;height: 97%;width:100%;position:relative;}
+        #point1{margin:0px 0px;height: 30px;width: 30px;background-color: #E0D8DE;border-radius: 25px;position: absolute;}
+        #point2{margin:0px 0px;height: 30px;width: 30px;background-color: #9067C6;border-radius: 25px;position: absolute;}
+        #shop{color: #CFD2B2;display: flex;flex-direction: row;margin-top: 5px;}
+        #shop1, #shop2{margin-right: 10px;text-align: center;}
+        #shop a{text-align: center;}
+        .shopi{background-image:url(cart.png);height: 25px;width: 25px;background-size: cover;}
+        #footer{margin-top:5%;background-color: transparent !important;display: flex;flex-direction: row;justify-content: center;padding-left: 15%;padding-right: 15%;}
+        #footer #points{margin: 0px auto;color: #CFD2B2;margin-top: 18px;}
+        #footer *{background-color: transparent !important;}
+        .fondo{overflow:hidden;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);color:#9c9990;font-size: 60vh;background-color: transparent !important;display: flex;text-align: center;}
+        #fondooverflow{overflow: hidden !important;}
+    </style>
+</head>
+
+<!--
+    $ #252525 fondo de la página
+    $ #9c9990 bordes
+    $ #CFD2B2 texto
+    $ #E0D8DE clickable +1pts
+    $ #9067C6 clickable +5pts
+-->
+<body>
+    <div id="container">
+        <div id="fondooverflow">
+            <a class="fondo" id="fondo" hidden="true">0</a>
+        </div>
+        <div id="title">
+            <h1>Clicking dots</h1>
+            <a href="https://twitter.com/rotoforze" target="_blank">By rotoforze</a>
+        </div>
+        <div id="game">
+            <div id="gamezone">
+        </div>
+        <div id="footer">
+            <div id="points">
+                <a id="pointstxt">Points: 0</a>
+            </div>
+            <div id="shop">
+                <div id="shop1">
+                    <a>+1 ball</a>
+                    <div id="addball" class="shopi"></div>
+                    <a id="addballprice" class="price">100 points</a>
+                </div>
+                <div id="shop2">
+                    <a>-0,5s</a>
+                    <div id="lesstime" class="shopi"></div>
+                    <a id="lesstimeprice" class="price">125 points</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body></html>
